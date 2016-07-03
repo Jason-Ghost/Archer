@@ -1,3 +1,7 @@
+/*
+    Author: Jason.Ghost
+    Time: 2016/7/3
+*/
 #pragma comment( lib, "ws2_32.lib" )
 
 #include <winsock2.h>
@@ -52,6 +56,7 @@ public:
     void CleanReceiveSocket(void);
 
     BOOL Receive(int count, int delay);
+    char * Receive(void);
 
     ~Broadcast() {
         CleanSendSocket();
